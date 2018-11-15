@@ -1,0 +1,113 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"__editor_plugin_screen__": "3D"
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LblRewarded" type="Label" parent="CanvasLayer"]
+margin_right = 1026.0
+margin_bottom = 32.0
+text = "REWARDED VIDEO RETURN"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="."]
+margin_left = 433.0
+margin_top = 61.0
+margin_right = 517.0
+margin_bottom = 75.0
+text = "TESTTESTTESS"
+
+[node name="LabelLatitude" type="Label" parent="."]
+margin_left = 435.0
+margin_top = 81.0
+margin_right = 487.0
+margin_bottom = 109.0
+text = "0.00000"
+
+[node name="LabelLongitude" type="Label" parent="."]
+margin_left = 435.0
+margin_top = 104.0
+margin_right = 537.0
+margin_bottom = 135.0
+text = "1.111111111
+"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 387.0
+margin_top = 227.0
+margin_right = 624.0
+margin_bottom = 303.0
+text = "Get coordinates"
+
+[node name="CheckId" type="Label" parent="."]
+margin_left = 632.0
+margin_top = 61.0
+margin_right = 858.0
+margin_bottom = 92.0
+text = "Ceeeeeeeeee
+"
+
+[node name="isGps" type="Label" parent="."]
+margin_left = 634.0
+margin_top = 95.0
+margin_right = 768.0
+margin_bottom = 109.0
+text = "isGps"
+
+[node name="isNetwork" type="Label" parent="."]
+margin_left = 634.0
+margin_top = 114.0
+margin_right = 783.0
+margin_bottom = 128.0
+text = "isNetwork"
+
+[node name="getInit" type="Label" parent="."]
+margin_left = 428.0
+margin_top = 30.0
+margin_right = 645.0
+margin_bottom = 53.0
+text = "getInit"
+
+[node name="Altitude" type="Label" parent="."]
+margin_left = 435.0
+margin_top = 125.0
+margin_right = 475.0
+margin_bottom = 139.0
+text = "0.0"
+
+[node name="GpsSpeed" type="Label" parent="."]
+margin_left = 435.0
+margin_top = 146.0
+margin_right = 475.0
+margin_bottom = 160.0
+text = "0.0"
+
+[node name="GpsTime" type="Label" parent="."]
+margin_left = 435.0
+margin_top = 166.0
+margin_right = 475.0
+margin_bottom = 180.0
+text = "0.0"
+
+[node name="GpsBearing" type="Label" parent="."]
+margin_left = 435.0
+margin_top = 187.0
+margin_right = 475.0
+margin_bottom = 201.0
+text = "0.0deg"
+
+[node name="GpsAccuracy" type="Label" parent="."]
+margin_left = 639.0
+margin_top = 153.0
+margin_right = 772.0
+margin_bottom = 168.0
+text = "accuracy"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
