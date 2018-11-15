@@ -1,3 +1,5 @@
+// Vadym Volokitin 
+
 package org.godotengine.godot;
 
 import java.security.MessageDigest;
@@ -27,8 +29,6 @@ import android.provider.Settings;
 
 public class GodotGpsModule extends Godot.SingletonBase {
 
-    
-
     /*---------- Listener class to get coordinates ------------- */
     private class MyLocationListener implements LocationListener {
 
@@ -53,15 +53,11 @@ public class GodotGpsModule extends Godot.SingletonBase {
         public void onStatusChanged(String provider, int status, Bundle extras) {}
     }
 
-
-
     // The minimum distance to change Updates in meters // 1 meters
     private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 1; 
 
     // The minimum time between updates in milliseconds // 1 sec
     private static final long MIN_TIME_BW_UPDATES = 1000 * 1 * 1;     
-    
-    
 
     // Flag for GPS status
     boolean isGPSEnabled = false;
@@ -96,10 +92,6 @@ public class GodotGpsModule extends Godot.SingletonBase {
     // Accuracy
     private float gps_accuracy = 0;     
     
-    
-    
-    
-    
     // The main activity of the game
 	private Activity activity = null; 
     
@@ -122,7 +114,8 @@ public class GodotGpsModule extends Godot.SingletonBase {
         
         return(value);
     } 
-   
+
+    
     /**
      * Function to get longitude
      * */ 
@@ -182,8 +175,6 @@ public class GodotGpsModule extends Godot.SingletonBase {
         return(value);
     } 
 
-
-
     
     public String getGPSState() {
         int value = 0;
@@ -202,19 +193,6 @@ public class GodotGpsModule extends Godot.SingletonBase {
         return (Integer.toString(value));
     } 
 
-    
-/*
-location.getAccuracy() float
-location.getSpeed() float
-location.getTime() long
-
-location.getBearing() - direction    float
-location.bearingTo(Location destination)  - peleng to destination
-
-location.distanceTo(Location destination)
-location.getAltitude() double 
-
-*/    
     public void getInit() {/********************************************************************************************/
 		activity.runOnUiThread(new Runnable()
 		{
@@ -229,50 +207,23 @@ location.getAltitude() double
                         // Getting network status
                         isNetworkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
-//                        if (isGPSEnabled) 
-//                        {        
-                            if (locationManager != null) 
-                            {
-                                canGetLocation = true;
-                                location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                                if (location != null) 
-                                {
-                                    latitude =  location.getLatitude();
-                                    longitude = location.getLongitude();
-                                }
-                            } 
-                        
-                            locationManager.requestLocationUpdates(
-                                                                    LocationManager.GPS_PROVIDER,
-                                                                    MIN_TIME_BW_UPDATES,
-                                                                    MIN_DISTANCE_CHANGE_FOR_UPDATES, 
-                                                                    locationListener
-                                                                );        
-                                                                /*
-                        }
-                        else if(isNetworkEnabled)
+                        if (locationManager != null) 
                         {
-                            if (locationManager != null) 
+                            canGetLocation = true;
+                            location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                            if (location != null) 
                             {
-                                canGetLocation = true;
-                                location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-                                if (location != null) 
-                                {
-                                    latitude =  location.getLatitude();
-                                    longitude = location.getLongitude();
-                                }
-                            } 
+                                latitude =  location.getLatitude();
+                                longitude = location.getLongitude();
+                            }
+                        } 
                         
-                            locationManager.requestLocationUpdates(
-                                                                    LocationManager.NETWORK_PROVIDER,
-                                                                    MIN_TIME_BW_UPDATES,
-                                                                    MIN_DISTANCE_CHANGE_FOR_UPDATES, 
-                                                                    locationListener
-                                                                );                               
-                        }
-*/                                                                
-                                                                
-                                                                
+                        locationManager.requestLocationUpdates(
+                                                                LocationManager.GPS_PROVIDER,
+                                                                MIN_TIME_BW_UPDATES,
+                                                                MIN_DISTANCE_CHANGE_FOR_UPDATES, 
+                                                                locationListener
+                                                             );        
                 }
                 catch (Exception e) 
                 {
