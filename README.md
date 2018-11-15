@@ -40,7 +40,10 @@ See example project gps_example . Dont forget add to project_name.godod  link to
 > modules="org/godotengine/godot/GodotGpsModule"  
 
 Export project to anroid .apk file and start it under Android. 
-I tested it on LG Nexus 
+I tested it on LG Nexus 5X Android 8.1.0  
+Best regarts,
+Vadym Volokitin.
+
 
 
 
