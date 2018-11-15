@@ -13,7 +13,7 @@
 Just copy folder gpsmodule to folder godot/modules/ of godot engine source code.
 
 - Compile godot engine:  
-See here:  http://docs.godotengine.org/en/3.0/development/compiling/compiling_for_windows.html  
+See here:  http://docs.godotengine.org/en/3.0/development/compiling/index.html
 For Linux:
 >scons -j8 platform=x11 target=release_debug  
 >scons -j8 platform=android target=release_debug  
@@ -37,9 +37,10 @@ Compilation time is more than 10 minutes.
 See example project gps_example . Dont forget add to project_name.godod  link to module name:
 > [android]
 > 
-> modules="org/godotengine/godot/GodotGpsModule"
+> modules="org/godotengine/godot/GodotGpsModule"  
 
-
+Export project to anroid .apk file and start it under Android. 
+I tested it on LG Nexus 
 
 
 
