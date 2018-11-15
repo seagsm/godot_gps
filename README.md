@@ -25,6 +25,7 @@ must be added in game progect to the export custom package.
 If you need clean build files:
 
 > scons --clean platform=windows  
+> scons --clean platform=x11  
 > scons --clean platform=android  
 
 Compilation time is more than 10 minutes.  
