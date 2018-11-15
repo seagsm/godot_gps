@@ -16,8 +16,8 @@ Just copy folder gpsmodule to folder godot/modules/ of godot engine source code.
 See here:  http://docs.godotengine.org/en/3.0/development/compiling/compiling_for_windows.html  
 For Linux:
 >scons -j8 platform=x11 target=release_debug  
->scons -j8 platform=android target=release_debug 
->..\godot/platform/android/java> gradle build  
+>scons -j8 platform=android target=release_debug  
+>../godot/platform/android/java> gradle build  
 
  -j8  parametr can be removed. it shows how match CPU COREs do you want to use for compilation.  
 Fresh compiled android_debug.apk and android_release.apk files from godot/bin/  
