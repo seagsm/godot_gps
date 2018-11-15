@@ -24,7 +24,7 @@ If you do some changes in ../godot/modules/gpsmodule/android/GodotGpsModule.java
 
 -j8  parametr can be removed. it shows how match CPU COREs do you want to use for compilation.  
 Fresh compiled android_debug.apk and android_release.apk files from godot/bin/  
-must be added in game progect to the export custom package.  
+must be added in game project to the export custom package.  
 If you need clean build files:
 
 > scons --clean platform=windows  
