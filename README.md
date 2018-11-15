@@ -19,7 +19,10 @@ For Linux:
 >scons -j8 platform=android target=release_debug  
 >../godot/platform/android/java> gradle build  
 
- -j8  parametr can be removed. it shows how match CPU COREs do you want to use for compilation.  
+If you do some changes in ../godot/modules/gpsmodule/android/GodotGpsModule.java , you should recompile it by  
+../godot/platform/android/java> gradle build  
+
+-j8  parametr can be removed. it shows how match CPU COREs do you want to use for compilation.  
 Fresh compiled android_debug.apk and android_release.apk files from godot/bin/  
 must be added in game progect to the export custom package.  
 If you need clean build files:
